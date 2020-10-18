@@ -1,0 +1,91 @@
+/* -------------------  MOBILE  --------------------- */
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+footer {
+  /* footer styles */
+}
+
+.buttonContainer,
+.roverContainerOuter {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  align-items: center;
+}
+
+.buttonContainer button {
+  display: inline-block;
+  width: 110px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.buttonContainer button:last-of-type {
+  margin-bottom: 0;
+}
+
+.roverGalleryContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.imgContainer {
+  overflow: hidden;
+  margin: 0;
+  margin-right: 20px;
+  width: calc(33.33% - 13.33px);
+}
+
+.imgContainer:nth-child(3n + 3) {
+  margin-right: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+/* -------------------  TABLET  --------------------- */
+@media (min-width: 768px) {
+  .buttonContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .buttonContainer button {
+    margin-bottom: 0;
+  }
+}
+
+/* -------------------  DESKTOP  -------------------- */
+
+@media (min-width: 1224px) {
+  /* use mobile */
+}
+
+/* -------------------  LARGE SCREENS  -------------- */
+
+@media (min-width: 1824px) {
+  /* use mobile */
+}

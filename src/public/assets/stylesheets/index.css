@@ -16,10 +16,6 @@ main {
   padding: 20px;
 }
 
-footer {
-  /* footer styles */
-}
-
 .buttonContainer,
 .roverContainerOuter {
   margin: 0 auto;
@@ -54,6 +50,7 @@ footer {
   margin: 0;
   margin-right: 20px;
   width: calc(33.33% - 13.33px);
+  padding-bottom: 20px;
 }
 
 .imgContainer:nth-child(3n + 3) {
@@ -68,6 +65,10 @@ img {
 
 /* -------------------  TABLET  --------------------- */
 @media (min-width: 768px) {
+  .roverContainerOuter {
+    max-width: 800px;
+  }
+
   .buttonContainer {
     flex-direction: row;
     justify-content: space-between;
@@ -76,16 +77,4 @@ img {
   .buttonContainer button {
     margin-bottom: 0;
   }
-}
-
-/* -------------------  DESKTOP  -------------------- */
-
-@media (min-width: 1224px) {
-  /* use mobile */
-}
-
-/* -------------------  LARGE SCREENS  -------------- */
-
-@media (min-width: 1824px) {
-  /* use mobile */
 }

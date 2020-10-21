@@ -1,7 +1,5 @@
-const { Map } = require('immutable');
-
 const store = {
-  rovers: ['Curiosity', 'Opportunity', 'Spirit'],
+  rovers: Immutable.List(['Curiosity', 'Opportunity', 'Spirit']),
   selectedRoverData: {}
 };
 
@@ -70,7 +68,7 @@ const RoverImages = (selectedRoverData) => {
 };
 
 const Cards = (selectedRoverData) => {
-  const { name, launchDate, landingDate, status, photos } = selectedRoverData;
+  const { name, launchDate, landingDate, status, maxDate } = selectedRoverData;
 
   if (!Object.keys(selectedRoverData).length) {
     return '';
@@ -82,7 +80,7 @@ const Cards = (selectedRoverData) => {
         <li>Landing Date: <em>${landingDate}</em></li>
         <li>Status: <em>${status}</em></li>
       </ul>
-      <h3>Images</h3>
+      <h3>Images: ${maxDate}</h3>
       <div class='roverGalleryContainer'>
         ${RoverImages(selectedRoverData)}
       </div>`;
